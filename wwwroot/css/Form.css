@@ -1,0 +1,12 @@
+.formularioFiltros  {
+  background-color:rgb(192, 224, 155);
+
+}
+.body {
+  margin-bottom: 60px;
+  background-color: #9bc8f8;
+}
+.formulario {
+  padding:2em;
+  border: 2px solid grey;
+}
