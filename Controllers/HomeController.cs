@@ -42,6 +42,11 @@ public class HomeController : Controller
         return View("~/Views/Registro/Registro.cshtml");
     }
 
+    public IActionResult InicioSesion()
+    {
+        return View("~/Views/Registro/InicioSesion.cshtml");
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
