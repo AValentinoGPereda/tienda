@@ -39,7 +39,7 @@ public class HomeController : Controller
 
    public IActionResult Registro()
     {
-        return View("Registro");
+        return View("~/Views/Registro/Registro.cshtml");
     }
 
 
