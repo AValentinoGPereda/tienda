@@ -37,6 +37,10 @@ public class HomeController : Controller
         return View();
     }
 
+   public IActionResult Registro()
+    {
+        return View("Registro");
+    }
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

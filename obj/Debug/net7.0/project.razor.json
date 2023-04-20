@@ -18675,6 +18675,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Sistema\\tienda\\Views\\Registro\\Registro.cshtml",
+      "TargetPath": "Views\\Registro\\Registro.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Sistema\\tienda\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
