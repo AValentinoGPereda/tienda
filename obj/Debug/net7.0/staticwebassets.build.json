@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YcSkdP57qUxTcy6oVif/zXWXQ5Miac9ii+iCzR0/UVM=",
+  "Hash": "dnQEAPRzR+BoZPzIn0JWhmMJ/aI9nGmk0nHBtBJpm3k=",
   "Source": "myapp",
   "BasePath": "_content/myapp",
   "Mode": "Default",
@@ -134,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno_v2.png",
+      "SourceId": "myapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sistema\\tienda\\wwwroot\\",
+      "BasePath": "_content/myapp",
+      "RelativePath": "images/Logotipo para Tecnología y Juegos  Verde Moderno_v2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno_v2.png"
     },
     {
       "Identity": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png",
