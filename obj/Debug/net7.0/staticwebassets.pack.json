@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png",
+      "PackagePath": "staticwebassets\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png"
+    },
+    {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\js\\Form.js",
       "PackagePath": "staticwebassets\\js\\Form.js"
     },
