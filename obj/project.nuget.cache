@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TayYbk+nkiCo1TPS97j6KziNrOq5VwXlCFN1E0dEVIAT5U7YzPgz4wOrwBS1AX79TfPX+ACuuPqiZ2bnuYZgCQ==",
+  "dgSpecHash": "U3eaxW2ZY9DhG8iMVUvIX3lhNx0lDFLoW99lDLeEaki54aAzvljy+WYSp6Lril+miQizPwO35bf77NDKmHQQVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sistema\\tienda\\myapp.csproj",
+  "projectFilePath": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
