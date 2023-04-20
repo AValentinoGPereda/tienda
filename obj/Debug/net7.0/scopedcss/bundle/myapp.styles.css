@@ -40,11 +40,67 @@ button.accept-policy[b-sfcgpkgsl6] {
   line-height: inherit;
 }
 
-.footer[b-sfcgpkgsl6] {
-  position: absolute;
+footer[b-sfcgpkgsl6]{
+  background: #212226;
+  padding: 20px;
+  color: white;
+  position: fixed;
   bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+}    
+.main-content[b-sfcgpkgsl6]{
+display: flex;
+}
+.main-content .box[b-sfcgpkgsl6]{
+flex-basis: 50%;
+padding: 0px 20px;
+}
+.box h2[b-sfcgpkgsl6]{
+font-size: 1.125rem;
+font-weight: 600;
+text-transform: uppercase;
+}
+.box .content[b-sfcgpkgsl6]{
+margin: 20px 0 0 0;
+position: relative;
+}
+.box .content[b-sfcgpkgsl6]:before{
+position: absolute;
+content: '';
+top: -10px;
+height: 2px;
+width: 100%;
+background: #1a1a1a;
+}/*linea negra del footer */
+.box .content[b-sfcgpkgsl6]:after{
+position: absolute;
+content: '';
+height: 2px;
+width: 15%;
+background: #1f2f52;
+top: -10px;
+}/* linea del footer*/
+.left .content p[b-sfcgpkgsl6]{
+text-align: justify;
+}/* letra de la izquierda del footer*/
+.center .content .fas[b-sfcgpkgsl6]{
+font-size: 1.4375rem;
+background: #1a1a1a;
+line-height: 45px;
+text-align: center;
+border-radius: 50%;
+transition: 0.3s;
+cursor: pointer;
+padding-left: 15px;
+}/*imagenes a poner telefono, email, simbolo de ubi */
+.center .content .text[b-sfcgpkgsl6]{
+font-size: 1.0625rem;
+font-weight: 500;
+padding-left: 10px;
+}
+.bottom center[b-sfcgpkgsl6]{
+padding-bottom: 5px;
+font-size: 0.850rem;
+color: gray;
+ /* copy de la empresa*/
 }
 
