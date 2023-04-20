@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Form.css"
     },
     {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Index.css",
+      "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

@@ -1,0 +1,44 @@
+body {
+    background: linear-gradient(to bottom, #8a2be2, #4b0082);
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  .columna {
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .texto {
+    margin-bottom: 10px;
+  }
+  
+  .parrafo {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .btn {
+    color: #fff;
+    background-color: #800080;
+    border-color: #800080;
+  }
+  
+  .btn:hover {
+    background-color: #4b0082;
+    border-color: #4b0082;
+  }
+  
+  .txt-logo {
+    max-width: 100%;
+  }
+  
+  .img-logo {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  

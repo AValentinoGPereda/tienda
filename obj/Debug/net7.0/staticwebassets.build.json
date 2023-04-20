@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IP6uMxy+a6FOafH7qGcmim2p7XITkdprQ9areYVc/bk=",
+  "Hash": "NVpRgsmwLp4TMqkbLLEOUNUZRgRE8pgMIXhMzY8hGTE=",
   "Source": "myapp",
   "BasePath": "_content/myapp",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Form.css"
+    },
+    {
+      "Identity": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Index.css",
+      "SourceId": "myapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Sistema\\tienda\\wwwroot\\",
+      "BasePath": "_content/myapp",
+      "RelativePath": "css/Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
     },
     {
       "Identity": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\site.css",
