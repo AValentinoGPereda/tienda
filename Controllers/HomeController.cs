@@ -42,11 +42,6 @@ public class HomeController : Controller
         return View("~/Views/Registro/Registro.cshtml");
     }
 
-       public IActionResult Admin()
-    {
-        return View("~/Views/Admin/Index.cshtml");
-    }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()

@@ -18670,6 +18670,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Sistema\\tienda\\Views\\Registro\\InicioSesion.cshtml",
+      "TargetPath": "Views\\Registro\\InicioSesion.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Sistema\\tienda\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
