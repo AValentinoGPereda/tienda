@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\myapp.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Admin.css",
+      "PackagePath": "staticwebassets\\css\\Admin.css"
+    },
+    {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Form.css",
       "PackagePath": "staticwebassets\\css\\Form.css"
     },

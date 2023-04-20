@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  button {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .ver-cuentas {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  .ver-transacciones {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .anadir-productos {
+    background-color: #f1c40f;
+    color: #fff;
+  }
+  
+  .ofertas {
+    background-color: #e74c3c;
+    color: #fff;
+  }
