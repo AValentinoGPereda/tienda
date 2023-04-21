@@ -9,26 +9,24 @@
 <body>
 	<h1>Registro de Usuario</h1>
 	<form asp-controller="Registro" asp-action="Registro" method="post">
-		<label for="correo">Correo Electrónico:</label><br>
-		<input type="email" id="correo" name="correo" required><br>
+		
+		<label asp-for="Correo">Correo Electrónico:</label><br>
+		<input type="email" asp-for="Correo" required><br>
 
-		<label for="usuario">Nombre de Usuario:</label><br>
-		<input type="text" id="usuario" name="usuario" required><br>
-
-		<label for="apellidos">Apellidos:</label><br>
-		<input type="text" id="apellidos" name="apellidos" required><br>
+		<label asp-for="NombreUsu">Nombre de Usuario:</label><br>
+		<input type="text" asp-for="NombreUsu" required><br>
 
 		<label asp-for="Nombre">Nombres:</label><br>
-		<input type="text" asp-for="Nombre" name="Nombre" required><br>
+		<input type="text" asp-for="Nombre" required><br>
 
-		<label for="telefono">Teléfono:</label><br>
-		<input type="tel" id="telefono" name="telefono" required><br>
+		<label asp-for="Telefono">Teléfono:</label><br>
+		<input type="tel" asp-for="Telefono" required><br>
 
-		<label for="pais">País:</label><br>
-		<input type="text" id="pais" name="pais" required><br>
+		<label asp-for="Pais">País:</label><br>
+		<input type="text" asp-for="Pais" required><br>
 
-		<label for="contrasena">Contraseña:</label><br>
-		<input type="password" id="contrasena" name="contrasena" required><br>
+		<label asp-for="Contrasena">Contraseña:</label><br>
+		<input type="password" asp-for="Contrasena" required><br>
 
 		<label for="confirmar_contrasena">Confirmar Contraseña:</label><br>
 		<input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required><br>

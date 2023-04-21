@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace myapp.Models
 {
-    [Table("registro")]
+    [Table("usuario")]
     public class Registro
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
