@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8" />
+<title>Listado de doctores</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="static/css/admin.css" th:href="Admin.css">
+</head>
+<script type="text/javascript">
+	function ModificarCorreo()
+	{
+		var txt;
+		var respuesta= prompt("¿Estas seguro de eliminar al usuario?",txt);
+		
+		if(txt==true)
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+	
+	function EliminarUsuario()
+	{
+		
+		var respuesta= confirm("¿Estas seguro de eliminar al usuario?");
+		
+		if(respuesta==true)
+		{
+			return true;
+		}
+		else 
+		{
+			return false;
+		}
+	}
+</script>
+
+<body>
+<table border="5" id="adminT">
+	<thead>
+		<tr>
+		    <th>ID</th>
+			<th>NOMBRES</th>
+			<th>APELLIDOS</th>
+			<th>CORREO</th>
+			<th>CLINICA</th>
+			<th>ESPECIALIDAD</th>
+			<th>EDITAR</th>
+			<th>ELIMINAR</th>
+		</tr>
+	</thead>
+	
+	<tbody>
+		<tr>
+		<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><button class="btn btn-outline-warning waves-effect"><a> Editar</a></button></td>
+				<td><button class="btn btn-outline-warning waves-effect"><a 
+				onclick="return confirm('¿Estás seguro que deseas eliminar?');">-</a>
+				</button></td>
+				</tr>
+	</tbody>
+</table>
+</body>
+</html>

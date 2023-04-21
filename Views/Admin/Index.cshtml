@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="~/css/Admin.css" asp-append-version="true" />
   <title>Botones</title>
 </head>
-<body>
-  <button class="ver-cuentas">Ver cuentas</button>
-  <button class="ver-transacciones">Ver transacciones</button>
-  <button class="anadir-productos">Añadir productos</button>
-  <button class="ofertas">Ofertas</button>
+<body class="admin"> 
+  <a asp-area="" asp-controller="Admin" asp-action="ListarCuentas"><button class="ver-cuentas">Ver cuentas</button></a>
+  <a asp-area="" asp-controller="Admin" asp-action="ListarOferta"><button class="ver-transacciones">Ver transacciones</button></a>
+  <a asp-area="" asp-controller="Admin" asp-action="ListarProducto"><button class="anadir-productos">Añadir productos</button></a>
+  <a asp-area="" asp-controller="Admin" asp-action="ListarTransacciones"><button class="ofertas">Ofertas</button></a>
 </body>
 </html>

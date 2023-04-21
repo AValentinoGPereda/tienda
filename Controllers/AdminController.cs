@@ -13,9 +13,25 @@ public class AdminController : Controller {
     }
 
 
-   public IActionResult Admin()
+   public IActionResult Index()
     {
-        return View("Index");
+        return View();
+    }
+    public IActionResult ListarCuentas()
+    {
+        return View();
+    }
+    public IActionResult ListarOferta()
+    {
+        return View();
+    }
+    public IActionResult ListarProducto()
+    {
+        return View();
+    }
+    public IActionResult ListarTransacciones()
+    {
+        return View();
     }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
