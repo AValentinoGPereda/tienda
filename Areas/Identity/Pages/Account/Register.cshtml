@@ -11,16 +11,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Registro.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 </head>
 
-<body class="cuerpo">
+<body>
 
-    <div class="row columna" style="margin-top: 50px;">
-        <div class="col-md-4 objeto">
+    <div >
+        <div >
             <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
                 <h4>Registrate</h4>
                 <hr class="regla-horizontal">
@@ -42,10 +40,9 @@
                     <label asp-for="Input.ConfirmPassword"></label>
                     <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
                 </div>
-                <hr class="regla-horizontal">
-                <div style="margin-bottom: 2.5rem">
-                    <button id="registerSubmit" type="submit" class="w-100 btn btn-lg"
-                        style="background-color: #FFBCA7;">Registrarse</button>
+                <hr>
+                <div >
+                    <button input type="submit" class="button-register" id="registerSubmit" type="submit">Registrarse</button>
                 </div>
             </form>
         </div>

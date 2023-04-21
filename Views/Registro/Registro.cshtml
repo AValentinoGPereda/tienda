@@ -8,36 +8,36 @@
 
 <body>
 	<h1>Registro de Usuario</h1>
-	<form asp-controller="Registro" asp-action="Registro" method="post" autocomplete="off">
+	<form asp-controller="Registro" asp-action="Registro" method="post" onsubmit="return confirm('Registro completado exitosamente');">
 		
 		<label asp-for="Correo">Correo Electrónico:</label><br>
-		<input type="email" asp-for="Correo" required autocomplete="off"><br>
+		<input type="email" asp-for="Correo" required><br>
 
 		<label asp-for="NombreUsu">Nombre de Usuario:</label><br>
-		<input type="text" asp-for="NombreUsu" required autocomplete="off"><br>
+		<input type="text" asp-for="NombreUsu" required><br>
 
 		<label asp-for="Nombre">Nombres:</label><br>
-		<input type="text" asp-for="Nombre" required autocomplete="off"><br>
+		<input type="text" asp-for="Nombre" required><br>
 
 		<label asp-for="Telefono">Teléfono:</label><br>
-		<input type="tel" asp-for="Telefono" required autocomplete="off"><br>
+		<input type="tel" asp-for="Telefono" required><br>
 
 		<label asp-for="Pais">País:</label><br>
-		<input type="text" asp-for="Pais" required autocomplete="off"><br>
+		<input type="text" asp-for="Pais" required><br>
 
 		<label asp-for="Contrasena">Contraseña:</label><br>
-		<input type="password" asp-for="Contrasena" required autocomplete="off"><br>
+		<input type="password" asp-for="Contrasena" required><br>
 
 		<label for="confirmar_contrasena">Confirmar Contraseña:</label><br>
-		<input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required autocomplete="off"><br>
+		<input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required><br>
 
 		<label>
-			<input type="checkbox" name="mi-checkbox" value="1">
-			<span class="checkmark"></span>
-			<span class="label-checkbox">Acepto los términos y condiciones</span>
+  				<input type="checkbox" name="mi-checkbox" value="1">
+  				<span class="checkmark"></span>
+  		<span class="label-checkbox">Acepto los términos y condiciones</span>
 		</label>
 
-		<input type="submit" class="button-register" value="Registrarse" asp-controller="Registro" asp-action="Registro" formnovalidate>
+		<input type="submit" class="button-register" value="Registrarse" asp-controller="Registro" asp-action="Registro">
 	</form>
 </body>
 </html>
