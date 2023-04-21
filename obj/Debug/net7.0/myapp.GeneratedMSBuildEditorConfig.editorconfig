@@ -9,105 +9,117 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = myapp
 build_property.RootNamespace = myapp
-build_property.ProjectDir = C:\Users\Sistema\tienda\
+build_property.ProjectDir = c:\Users\leona\Desktop\STORM\tienda\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Sistema\tienda
+build_property.MSBuildProjectDirectory = c:\Users\leona\Desktop\STORM\tienda
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Sistema/tienda/Areas/Identity/Pages/Account/Login.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Areas/Identity/Pages/Account/Register.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Areas/Identity/Pages/_ViewImports.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Areas/Identity/Pages/_ViewStart.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Admin/Index.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Admin/ListarCuentas.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Admin/ListarCuentas.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGFyQ3VlbnRhcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Admin/ListarOferta.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Admin/ListarOferta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGFyT2ZlcnRhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Admin/ListarProducto.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Admin/ListarProducto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGFyUHJvZHVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Admin/ListarTransacciones.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Admin/ListarTransacciones.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdGFyVHJhbnNhY2Npb25lcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Catalogo/Index.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Catalogo/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Catalogo/Producto.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Catalogo/IndexR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cSW5kZXhSLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leona/Desktop/STORM/tienda/Views/Catalogo/Producto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ29cUHJvZHVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Home/Cuenta.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Home/Cuenta.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDdWVudGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Home/Index.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Home/Nosotros.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Home/IndexR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleFIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leona/Desktop/STORM/tienda/Views/Home/Nosotros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3NvdHJvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Registro/InicioSesion.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Home/NosotrosR.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb3NvdHJvc1IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/leona/Desktop/STORM/tienda/Views/Registro/InicioSesion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9cSW5pY2lvU2VzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Registro/Registro.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Registro/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVnaXN0cm9cUmVnaXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Shared/Error.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Shared/_LoginPartial.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/_ViewImports.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/_ViewStart.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sistema/tienda/Views/Shared/_Layout.cshtml]
+[c:/Users/leona/Desktop/STORM/tienda/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sfcgpkgsl6

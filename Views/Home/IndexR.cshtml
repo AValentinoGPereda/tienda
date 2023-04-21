@@ -1,0 +1,111 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+    <title>Storm</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/Carrusel.css" asp-append-version="true" />
+</head>
+<body>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
+
+<div class="container-fluid">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active"> 
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/acv.png" class = "car-img" alt="First slide"></a> 
+      </div>
+      <div class="carousel-item">
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/mageseeker.png" class = "car-img" alt="Second slide"></a> 
+      </div>
+      <div class="carousel-item">
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/MinecraftLegends.png" class = "car-img" alt="Third slide"> </a>
+      </div>
+      <div class="carousel-item">
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/HFW.jpg" class = "car-img" alt="Fourth slide"> </a>
+      </div>
+      <div class="carousel-item">
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/TLOUII.jpg" class = "car-img" alt="Fifth slide"> </a>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+	<div class="container">
+		<a asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/DSGCE.png" class="producto" alt="Producto 1"></button></a>  
+  
+  <div class="info">
+		 <h3 class="titulo">DARKSIDERS GENESIS COLLECTOR'S EDITION</h3>
+	   <h3 class="precio">S/.329.92</h3>
+     <div class="boton">
+     <a  asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button>Comprar</button></a>
+     <a  asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button><img src="/images/carrito.png" class="carrito"></img></button></a>
+    </div>
+  </div>
+  </div>
+
+  	<div class="container">
+		<a asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/spidermanCE.png" class="producto" alt="Producto 1"></button></a>  
+  
+  <div class="info">
+		 <h3 class="titulo">Marvel’s Spider-Man Collector’s Edition - PlayStation 4 (Console Not Included)</h3>
+	   <h3 class="precio">S/.1316.62</h3>
+     <div class="boton">
+     <a  asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button>Comprar</button></a>
+     <a  asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button><img src="/images/carrito.png" class="carrito"></img></button></a>
+    </div>
+  </div>
+  </div>
+
+  <div class="container">
+		<a asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/GOWRCE.png" class="producto" alt="Producto 1"></button></a>   
+  <div class="info">
+		 <h3 class="titulo">God of War Ragnarök – Edición Jötnar</h3>
+	   <h3 class="precio">S/.1128.56</h3>
+     <div class="boton">
+     <a  asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button>Comprar</button></a>
+     <a  asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button><img src="/images/carrito.png" class="carrito"></img></button></a>
+    </div>
+  </div>
+  </div>
+
+<div class="border"></div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
