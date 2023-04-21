@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Sistema\\tienda\\myapp.csproj": {}
+    "C:\\gera\\trabajo progra\\tienda\\myapp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Sistema\\tienda\\myapp.csproj": {
+    "C:\\gera\\trabajo progra\\tienda\\myapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
+        "projectUniqueName": "C:\\gera\\trabajo progra\\tienda\\myapp.csproj",
         "projectName": "myapp",
-        "projectPath": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
-        "packagesPath": "C:\\Users\\Sistema\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Sistema\\tienda\\obj\\",
+        "projectPath": "C:\\gera\\trabajo progra\\tienda\\myapp.csproj",
+        "packagesPath": "C:\\Users\\kimbe\\.nuget\\packages\\",
+        "outputPath": "C:\\gera\\trabajo progra\\tienda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Sistema\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\kimbe\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
