@@ -6,40 +6,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
-    <title>Document</title>
+    <title>Storm</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="~/css/Carrusel.css" asp-append-version="true" />
 </head>
-
 <body>
     @{
         ViewData["Title"] = "Home Page";
     }
-    <div class="container">
-        <div class="row">
-            <div class="col columna">
-                <div class="texto">
-                    <p class="parrafo">Conoce parte de nuestra historia y como fue posible llegar a convertirnos en la gran familia que
-                        somos hoy en día.</p>
-                </div>
-                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Home"
-                    asp-action="Privacy"><strong>CONOCE MÁS SOBRE NOSOTROS</strong></a>
-            </div>
-            <div class="col columna">
-                <div>
-                    <img class="txt-logo" src="/images/Logo txt 2 Paleta.png">
-                </div>
-                <div>
-                </div>
-            </div>
-            <div class="col columna">
-                <div class="texto">
-                    <p class="parrafo">Descubre nuestra amplia gama de sabores, diseñados exclusivamente para deleitar a los más
-                        exigentes paladares.</p>
-                </div>
-                <a class="btn boton rounded-pill" role="button" asp-area="" asp-controller="Catalogo"
-                    asp-action="Index"><strong>NUESTRO NUEVOS PRODUCTOS</strong></a>
-            </div>
-        </div>
-    </div>
-</body>
+<div class="container-fluid">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
+    <div class="carousel-inner">
+      <div class="carousel-item active"> 
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/acv.png" alt="First slide"></a> 
+      </div>
+      <div class="carousel-item">
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/mageseeker.png" alt="Second slide"></a> 
+      </div>
+      <div class="carousel-item">
+       <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/MinecraftLegends.png" alt="Third slide"> </a>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+	<div class="container">
+		<a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/DSGCE.png" alt="Producto 1"></button></a>
+		<div class="description">
+			<h2>DARKSIDERS GENESIS COLLECTOR'S EDITION</h2>
+		</div>
+		<div class="price">
+			<h3>S/.329.92</h3>
+			<a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button>Comprar</button></a>
+		</div>
+	</div>
+
+	<div class="container">
+		<a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/spidermanCE.png" alt="Producto 2"></button></a>
+		<div class="description">
+			<h2>Marvel’s Spider-Man Collector’s Edition - PlayStation 4 (Console Not Included)</h2>
+		</div>
+		<div class="price">
+			<h3>S/.1316.62</h3>
+			<a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button>Comprar</button></a>
+		</div>
+	</div>
+
+	<div class="container">
+		<a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><img src="/images/GOWRCE.png" alt="Producto 3"></button></a>
+		<div class="description">
+			<h2>God of War Ragnarök – Edición Jötnar</h2>
+		</div>
+		<div class="price">
+			<h3>S/.1128.56</h3>
+			 <a class="nav-link text-dark" asp-area="" asp-controller="Registro" asp-action="InicioSesion"><button>Comprar</button></a>
+		</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>

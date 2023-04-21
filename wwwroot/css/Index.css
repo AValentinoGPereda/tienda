@@ -4,6 +4,8 @@ body {
   
   .container {
     padding: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto;
   }
   
   .columna {

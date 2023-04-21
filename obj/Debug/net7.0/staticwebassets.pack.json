@@ -9,12 +9,20 @@
       "PackagePath": "staticwebassets\\css\\Admin.css"
     },
     {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Carrusel.css",
+      "PackagePath": "staticwebassets\\css\\Carrusel.css"
+    },
+    {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Form.css",
       "PackagePath": "staticwebassets\\css\\Form.css"
     },
     {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Index.css",
       "PackagePath": "staticwebassets\\css\\Index.css"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\inicioSesion.css",
+      "PackagePath": "staticwebassets\\css\\inicioSesion.css"
     },
     {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\registro.css",
@@ -29,12 +37,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\DSGCE.png",
+      "PackagePath": "staticwebassets\\images\\DSGCE.png"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\GOWRCE.png",
+      "PackagePath": "staticwebassets\\images\\GOWRCE.png"
+    },
+    {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png",
       "PackagePath": "staticwebassets\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png"
     },
     {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno_v2.png",
       "PackagePath": "staticwebassets\\images\\Logotipo para Tecnología y Juegos  Verde Moderno_v2.png"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\MinecraftLegends.png",
+      "PackagePath": "staticwebassets\\images\\MinecraftLegends.png"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\acv.png",
+      "PackagePath": "staticwebassets\\images\\acv.png"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\mageseeker.png",
+      "PackagePath": "staticwebassets\\images\\mageseeker.png"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\images\\spidermanCE.png",
+      "PackagePath": "staticwebassets\\images\\spidermanCE.png"
     },
     {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\js\\Form.js",
