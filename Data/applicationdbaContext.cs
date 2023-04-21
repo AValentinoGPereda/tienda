@@ -12,5 +12,6 @@ public class ApplicationDbContext : IdentityDbContext
     }
 
     public DbSet<Registro> DataRegistro { get; set; }
+     public DbSet<Producto> DataProducto { get; set; }
 
 }

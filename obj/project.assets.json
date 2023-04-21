@@ -11133,19 +11133,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leona\\.nuget\\packages\\": {}
+    "C:\\Users\\kimbe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leona\\Desktop\\STORM\\tienda\\myapp.csproj",
+      "projectUniqueName": "c:\\gera\\trabajo progra\\tienda\\myapp.csproj",
       "projectName": "myapp",
-      "projectPath": "C:\\Users\\leona\\Desktop\\STORM\\tienda\\myapp.csproj",
-      "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leona\\Desktop\\STORM\\tienda\\obj\\",
+      "projectPath": "c:\\gera\\trabajo progra\\tienda\\myapp.csproj",
+      "packagesPath": "C:\\Users\\kimbe\\.nuget\\packages\\",
+      "outputPath": "c:\\gera\\trabajo progra\\tienda\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\kimbe\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
