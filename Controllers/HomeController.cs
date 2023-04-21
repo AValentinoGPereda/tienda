@@ -18,15 +18,6 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
-    {
-        return View();
-    }
-
-    public IActionResult Form()
-    {
-        return View();
-    }
     public IActionResult Nosotros()
     {
         return View();
@@ -35,20 +26,6 @@ public class HomeController : Controller
     public IActionResult Cuenta()
     {
         return View();
-    }
-
-   public IActionResult Registro()
-    {
-        return View("~/Views/Registro/Registro.cshtml");
-    }
-
-    public IActionResult InicioSesion()
-    {
-        return View("~/Views/Registro/InicioSesion.cshtml");
-    }
-   public IActionResult Admin()
-    {
-        return View("~/Views/Admin/Index.cshtml");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
