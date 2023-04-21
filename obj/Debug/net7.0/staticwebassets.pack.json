@@ -45,6 +45,10 @@
       "PackagePath": "staticwebassets\\images\\GOWRCE.png"
     },
     {
+      "Id": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\HFW.jpg",
+      "PackagePath": "staticwebassets\\images\\HFW.jpg"
+    },
+    {
       "Id": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png",
       "PackagePath": "staticwebassets\\images\\Logotipo para Tecnología y Juegos  Verde Moderno.png"
     },
@@ -57,8 +61,16 @@
       "PackagePath": "staticwebassets\\images\\MinecraftLegends.png"
     },
     {
+      "Id": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\TLOUII.jpg",
+      "PackagePath": "staticwebassets\\images\\TLOUII.jpg"
+    },
+    {
       "Id": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\acv.png",
       "PackagePath": "staticwebassets\\images\\acv.png"
+    },
+    {
+      "Id": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\carrito.png",
+      "PackagePath": "staticwebassets\\images\\carrito.png"
     },
     {
       "Id": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\mageseeker.png",

@@ -4,9 +4,9 @@ using myapp.Models;
 
 namespace myapp.Data;
 
-public class ApplicationDbaContext : IdentityDbContext
+public class ApplicationDbContext : IdentityDbContext
 {
-    public ApplicationDbaContext(DbContextOptions<ApplicationDbaContext> options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
     {
     }

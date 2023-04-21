@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ThM87jSgho4WlYiaNFfNIc8EgwnTn/IfFYR6uESlJR8=",
+  "Hash": "OUrL1/xw1Iv5KF4wKeLd7X0mxea/CQodp+yq+sW5SAw=",
   "Source": "myapp",
   "BasePath": "_content/myapp",
   "Mode": "Default",
@@ -204,6 +204,23 @@
       "OriginalItemSpec": "wwwroot\\images\\acv.png"
     },
     {
+      "Identity": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\carrito.png",
+      "SourceId": "myapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\",
+      "BasePath": "_content/myapp",
+      "RelativePath": "images/carrito.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\carrito.png"
+    },
+    {
       "Identity": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\DSGCE.png",
       "SourceId": "myapp",
       "SourceType": "Discovered",
@@ -236,6 +253,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\GOWRCE.png"
+    },
+    {
+      "Identity": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\HFW.jpg",
+      "SourceId": "myapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\",
+      "BasePath": "_content/myapp",
+      "RelativePath": "images/HFW.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\HFW.jpg"
     },
     {
       "Identity": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\Logotipo para Tecnología y Juegos  Verde Moderno_v2.png",
@@ -321,6 +355,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\spidermanCE.png"
+    },
+    {
+      "Identity": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\images\\TLOUII.jpg",
+      "SourceId": "myapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\",
+      "BasePath": "_content/myapp",
+      "RelativePath": "images/TLOUII.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\TLOUII.jpg"
     },
     {
       "Identity": "C:\\gera\\trabajo progra\\tienda\\wwwroot\\js\\Form.js",
