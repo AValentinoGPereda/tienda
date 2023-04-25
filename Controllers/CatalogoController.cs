@@ -11,48 +11,46 @@ using myapp.Data;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 
-namespace myapp.Controllers;
 
-public class CatalogoController : Controller
+
+namespace myapp.Controllers
 {
+    
+    public class CatalogoController : Controller
+    {
+        private readonly ILogger<CatalogoController> _logger;
+        private readonly ApplicationDbContext _dbcontext;
 
-    private readonly ILogger<CatalogoController> _logger;
-    private readonly ApplicationDbContext _dbcontext;
+        private readonly IDistributedCache _cache;
 
-    public CatalogoController(ILogger<CatalogoController> logger,
-                ApplicationDbContext context)
+        public CatalogoController(ILogger<CatalogoController> logger,
+                ApplicationDbContext context,
+                IDistributedCache cache)
         {
             _logger = logger;
             _dbcontext = context;
-            
+            _cache = cache;
         }
 
-    public IActionResult Producto()
-    {
-        
-        return View();
-    }
 
-       public IActionResult Productos(string? searchString)
+        public async Task<IActionResult> Index(string? searchString)
         {
+            
             var productos = from o in _dbcontext.DataProducto select o;
             //SELECT * FROM t_productos -> &
             if(!String.IsNullOrEmpty(searchString)){
-                productos = productos.Where(s => s.prod.Contains(searchString)); //Algebra de bool
+                productos = productos.Where(s => s.Name.Contains(searchString)); //Algebra de bool
                 // & + WHERE name like '%ABC%'
             }
-            Response.Headers["Cache-Control"] = "max-age=3600, public";
-            return View(productos.ToList());
+            productos = productos.Where(s => s.Status.Contains("Activo"));
+            
+            return View(await productos.ToListAsync());
         }
 
-public IActionResult Index()
-    {
-        
-        return View();
-    }
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View("Error!");
+        }
     }
 }

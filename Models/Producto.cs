@@ -7,23 +7,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace myapp.Models
 {
-    [Table("producto")]
+    [Table("t_producto")]
     public class Producto
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("id_prod")]
-        public int Id_prod { get; set; }
-        public string? prod { get; set; }
+        [Column("id")]
+        public int Id { get; set; }
+        public string? Name { get; set; }
 
-        public string? prec { get; set; }
+        public string? Descripcion { get; set; }
 
-        public Decimal tipo { get; set; }
+        public Decimal Precio { get; set; }
 
-        public Decimal desc{ get; set; }
+        public Decimal PorcentajeDescuento { get; set; }
 
-        public string? categ { get; set; }
+        public string? ImageName { get; set; }
 
-        public string? Spec_final { get; set; }
-        public string? imgProd { get; set; }
+        public string? Status { get; set; }
     }
 }
