@@ -6,8 +6,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace myapp.Models
 {
-    [Table("contacto")]
-    public class Contacto
+    [Table("t_contactos")]
+    public class Contactos
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
@@ -18,5 +18,8 @@ namespace myapp.Models
 
         [Column("email")]
         public string? CorreoElectronico { get; set; }
+
+        [Column("consulta")]
+        public string? Consulta { get; set; }
     }
 }

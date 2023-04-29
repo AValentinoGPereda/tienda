@@ -32,7 +32,7 @@ namespace myapp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(Contacto objContacto)
+        public IActionResult Create(Contactos objContacto)
         {
             _context.Add(objContacto);
             _context.SaveChanges();

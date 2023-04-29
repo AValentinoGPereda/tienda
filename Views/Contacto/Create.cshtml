@@ -1,4 +1,4 @@
-@model myapp.Models.Contacto
+@model myapp.Models.Contactos
 
 @{
     ViewData["Title"] = "Contacto";
@@ -20,6 +20,10 @@
                 <div class="form-group">
                     <label asp-for="CorreoElectronico" class="control-label"></label>
                     <input asp-for="CorreoElectronico" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Consulta" class="control-label"></label>
+                    <input asp-for="Consulta" class="form-control" />
                 </div>
                 <div class="form-group text-center">
                     <button type="submit" class="btn btn-primary">Enviar</button>
