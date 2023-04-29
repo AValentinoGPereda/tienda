@@ -8,6 +8,7 @@ namespace myapp.Models
     [Table("usuario_")]
     public class Registro
     {
+     
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id_usu")]
         public int Id { get; set; }

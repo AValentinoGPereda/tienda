@@ -12,8 +12,8 @@ using myapp.Data;
 namespace myapp.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230425213438_Initia_lMigration")]
-    partial class Initia_lMigration
+    [Migration("20230429022848_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -225,7 +225,7 @@ namespace myapp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("myapp.Models.Producto", b =>
+            modelBuilder.Entity("myapp.Models.Productos", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -234,27 +234,33 @@ namespace myapp.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Descripcion")
-                        .HasColumnType("text");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("PorcentajeDescuento")
-                        .HasColumnType("numeric");
-
-                    b.Property<decimal>("Precio")
+                    b.Property<decimal>("Prec_final")
                         .HasColumnType("numeric");
 
                     b.Property<string>("Status")
                         .HasColumnType("text");
 
+                    b.Property<string>("categ")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("desc")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("imgProd")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("prec")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("prod")
+                        .HasColumnType("text");
+
+                    b.Property<string>("tipo")
+                        .HasColumnType("text");
+
                     b.HasKey("Id");
 
-                    b.ToTable("t_producto");
+                    b.ToTable("t_productos");
                 });
 
             modelBuilder.Entity("myapp.Models.Registro", b =>

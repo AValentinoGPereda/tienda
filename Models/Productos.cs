@@ -8,11 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace myapp.Models
 {
     [Table("t_productos")]
-    public class Producto
+    public class Productos
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Column("id_prod")]
-        public int Id_prod { get; set; }
+        [Column("id")]
+        public int Id { get; set; }
 
         public string? prod { get; set; }
 
@@ -31,7 +31,7 @@ namespace myapp.Models
         public Decimal Prec_final { get; set; }
 
         public string? imgProd { get; set; }
-        
+
         public string? Status { get; set; }
     }
 }
