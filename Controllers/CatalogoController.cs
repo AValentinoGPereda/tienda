@@ -47,6 +47,15 @@ namespace myapp.Controllers
             return View(await productos.ToListAsync());
         }
 
+        public async Task<IActionResult> Details(int? id){
+            Productos objProducto = await _dbcontext.DataProducto.FindAsync(id);
+            if(objProducto == null){
+                return NotFound();
+            }
+
+            return View(objProducto);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
