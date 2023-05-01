@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Sistema\\tienda\\myapp.csproj": {}
+    "C:\\Users\\Sistema\\tienda\\myapp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Sistema\\tienda\\myapp.csproj": {
+    "C:\\Users\\Sistema\\tienda\\myapp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
+        "projectUniqueName": "C:\\Users\\Sistema\\tienda\\myapp.csproj",
         "projectName": "myapp",
-        "projectPath": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
+        "projectPath": "C:\\Users\\Sistema\\tienda\\myapp.csproj",
         "packagesPath": "C:\\Users\\Sistema\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Sistema\\tienda\\obj\\",
+        "outputPath": "C:\\Users\\Sistema\\tienda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Sistema\\AppData\\Roaming\\NuGet\\NuGet.Config"

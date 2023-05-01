@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\Carrusel.css"
     },
     {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Catalogo.css",
+      "PackagePath": "staticwebassets\\css\\Catalogo.css"
+    },
+    {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Form.css",
       "PackagePath": "staticwebassets\\css\\Form.css"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\Nosotros.css",
       "PackagePath": "staticwebassets\\css\\Nosotros.css"
+    },
+    {
+      "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\ProductoDetalle.css",
+      "PackagePath": "staticwebassets\\css\\ProductoDetalle.css"
     },
     {
       "Id": "C:\\Users\\Sistema\\tienda\\wwwroot\\css\\inicioSesion.css",
