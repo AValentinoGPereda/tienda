@@ -8,6 +8,7 @@
     Decimal montoTotal = @Model.montoTotal;
 }
 
+<link rel="stylesheet" href="~/css/Carrito.css" asp-append-version="true" />
 <h1>@ViewData["Title"]</h1>
 
 <a class="btn btn-primary" asp-controller="Pago" 
@@ -41,8 +42,8 @@
                 @Html.DisplayFor(modelItem => item.Precio)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
+                <a class="control" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="control" asp-action="Delete" asp-route-id="@item.Id">Borrar</a>
             </td>
         </tr>
 }

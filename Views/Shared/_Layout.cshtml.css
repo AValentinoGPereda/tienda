@@ -7,6 +7,10 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+nav{
+  max-width: 100%;
+  right: 0;
+}
 a {
   color: #0077cc;
 }
@@ -39,67 +43,57 @@ button.accept-policy {
   line-height: inherit;
 }
 
-footer{
-  background: #212226;
-  padding: 20px;
-  color: white;
+
+footer {
+  color: #fff;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
   position: fixed;
   bottom: 0;
-}    
-.main-content{
-display: flex;
-}
-.main-content .box{
-flex-basis: 50%;
-padding: 0px 20px;
-}
-.box h2{
-font-size: 1.125rem;
-font-weight: 600;
-text-transform: uppercase;
-}
-.box .content{
-margin: 20px 0 0 0;
-position: relative;
-}
-.box .content:before{
-position: absolute;
-content: '';
-top: -10px;
-height: 2px;
-width: 100%;
-background: #1a1a1a;
-}/*linea negra del footer */
-.box .content:after{
-position: absolute;
-content: '';
-height: 2px;
-width: 15%;
-background: #1f2f52;
-top: -10px;
-}/* linea del footer*/
-.left .content p{
-text-align: justify;
-}/* letra de la izquierda del footer*/
-.center .content .fas{
-font-size: 1.4375rem;
-background: #1a1a1a;
-line-height: 45px;
-text-align: center;
-border-radius: 50%;
-transition: 0.3s;
-cursor: pointer;
-padding-left: 15px;
-}/*imagenes a poner telefono, email, simbolo de ubi */
-.center .content .text{
-font-size: 1.0625rem;
-font-weight: 500;
-padding-left: 10px;
-}
-.bottom center{
-padding-bottom: 5px;
-font-size: 0.850rem;
-color: gray;
- /* copy de la empresa*/
+  width: 100%;
+  
 }
 
+.info{
+  left: 0 !important;
+  margin-left: 0% !important;
+  text-align: left !important;
+}
+
+.searchbar{
+  float: right;
+  margin: auto;
+}
+
+.btn-social {
+  color: #fff;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease-in-out;
+  right: 0;
+}
+
+.img-social{
+  border-radius: 50%;
+  right: 0;
+  float:right;
+  margin-left: 10px;
+}
+
+.btn-social:hover {
+  transform: scale(1.1);
+}
+
+.bg-purple {
+  background-color: #282828;
+}
+
+
+@media screen and (max-width: 575px) {
+  .txt-logo {
+    display: block;
+    margin: 0 auto;
+
+  }
+}

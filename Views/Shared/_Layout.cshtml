@@ -22,6 +22,12 @@
                     <ul class="navbar-nav flex-grow-1">
                       <partial name="_LoginPartial" /></ul>
                 </div>
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+  <form class="d-flex searchbar" asp-controller="Catalogo" asp-action="Index">
+    <input class="form-control me-2 searchbar" type="search" name="searchString" placeholder="Buscar" aria-label="Buscar">
+    <button class="btn btn-outline-light searchbar" type="submit">Buscar</button>
+  </form>
+</div>
             </div>
         </nav>
     </header>
@@ -31,58 +37,27 @@
         </main>
     </div>
 
-   <footer>
-      <div class="main-content">
-        <div class="left box">
-          <h2>Nosotros</h2>
-          <div class="content">
-            <p>Somos el grupo Storm del curso de Programación I de la universidad 
-	   San Martin de Porres que se ha puesto como objetivo la realización de una tienda de venta de videojuegos digitales y físicos en el que podamos brindarles una opción amigable e intuitiva a
-	     los distintos usuarios que utilicen nuestra página web.</p>
-          </div>
-        </div>
-
-        <div class="center box">
-          <h2>Ubicación</h2>
-          <div class="content">
-            <div class="place">
-              <span class="fas fa-map-marker-alt"></span>
-              <span class="text">Lima, Peru</span>
-            </div>
-            <div class="phone">
-              <span class="fas fa-phone-alt"></span>
-              <span class="text">+51 45465465</span>
-            </div>
-            <div class="email">
-              <span class="fas fa-envelope"></span>
-              <span class="text">FeelTheStorm@gmail.com</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="right box">
-          <h2>REDES SOCIALES</h2>
-          <div class="content">
-          	<div class="social">
-				<a href="https://www.facebook.com/people/Health-Technology/100067481210622/?viewas&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_transition=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false" target="blank">
-					<img alt="" src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_49,h_49,al_c,usm_0.66_1.00_0.01,enc_auto/e316f544f9094143b9eac01f1f19e697.png">
-				</a>
-				<a href="https://www.youtube.com/channel/UCrQuxmcgsxyRlW5QkkYVt5A" target="blank">
-					<img alt="" src="https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_49,h_49,al_c,usm_0.66_1.00_0.01,enc_auto/a1b09fe8b7f04378a9fe076748ad4a6a.png">
-				</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom">
-        <center>
-          <span class="credit">© 2023 by Storm</span>
-        </center>
-      </div>
-    </footer>
+    
+<footer class="container-fluid bg-purple p-3">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-md-6 text-center text-md-left">
+      <p class="mb-0 info"> FeelTheStorm@gmail.com</p>
+      <p class="mb-0 info">+51 45465465</p>
+      <p class="mb-0 info"> Lima, Peru</p>
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <a href="https://www.facebook.com/people/Health-Technology/100067481210622/?viewas&show_switched_toast=false&show_switched_tooltip=false&is_tour_dismissed=false&is_tour_completed=false&show_podcast_settings=false&show_community_transition=false&show_community_review_changes=false&should_open_composer=false&badge_type=NEW_MEMBER&show_community_rollback_toast=false" class=" mx-2" target="_blank"><img src = "https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_49,h_49,al_c,usm_0.66_1.00_0.01,enc_auto/e316f544f9094143b9eac01f1f19e697.png" class="img-social btn-social" ></a>
+      <a href="https://www.youtube.com/channel/UCrQuxmcgsxyRlW5QkkYVt5A" class="mx-2" target="_blank"><img src = "https://static.wixstatic.com/media/a1b09fe8b7f04378a9fe076748ad4a6a.png/v1/fill/w_49,h_49,al_c,usm_0.66_1.00_0.01,enc_auto/a1b09fe8b7f04378a9fe076748ad4a6a.png" class="img-social btn-social"></a>
+    </div>
+  </div>
+</footer>
+  
+  
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
+
 </body>
 </html>

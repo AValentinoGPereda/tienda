@@ -10,12 +10,18 @@ body {
 
 .img-responsive{
     border-radius: 15px;
+    margin-left: 0;
+    left: 0;
 }
 
 h1{
     text-align: center;
     color:#fff;
     margin-bottom: 20px;
+}
+
+h5{
+  text-align: justify;
 }
 
 .card:hover{

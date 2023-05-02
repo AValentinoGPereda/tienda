@@ -2,7 +2,11 @@
 @{
     ViewData["Title"] = "Catalogo";  
 }
+
  <link rel="stylesheet" href="~/css/Catalogo.css" asp-append-version="true" />
+ <link rel="stylesheet" href="~/css/_Layout.cshtml.css" asp-append-version="true" />
+
+
 <h1>@ViewData["Title"]</h1>
   <div class="container">
     <h1>@ViewData["Message"]</h1>
@@ -20,7 +24,7 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.prod)</h5>
-                  <p class="card-text">@Html.DisplayFor(modelItem => item.prec)</p>
+                  <p class="card-text">@Html.DisplayFor(modelItem => item.Prec_final)</p>
                 <div class="button-container">
                   <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
                 </div>
@@ -34,3 +38,5 @@
       </div>
     </div>
   </div>
+
+  
