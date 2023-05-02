@@ -1,4 +1,4 @@
-@model IEnumerable<myapp.Models.Productos>
+@model IEnumerable<myapp.Models.Producto>
 @{
     ViewData["Title"] = "Catalogo";  
 }
@@ -21,7 +21,7 @@
                 </div>
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.prod)</h5>
-                  <p class="card-text">@Html.DisplayFor(modelItem => item.prec)</p>
+                  <p class="card-text">@Html.DisplayFor(modelItem => item.Prec_final)</p>
                   <a class="btn btn-primary" asp-action="Add" asp-route-id="">Add</a>
                   <a class="btn btn-info" asp-action="Details" asp-route-id="">View</a>
                 </div>

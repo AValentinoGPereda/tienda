@@ -42,7 +42,7 @@ namespace myapp.Controllers
         public async Task<IActionResult> Index(string? searchString)
         {
             
-            var productos = from o in _dbcontext.DataProducto select o;
+            var productos = from o in _dbcontext.DataProductos select o;
             //SELECT * FROM t_productos -> &
             if(!String.IsNullOrEmpty(searchString)){
                 productos = productos.Where(s => s.prod.Contains(searchString)); //Algebra de bool
@@ -65,14 +65,14 @@ namespace myapp.Controllers
             var userID = _userManager.GetUserName(User); //sesion
             if(userID == null){
                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
-                List<Productos> producto = new List<Productos>();
+                List<Producto> producto = new List<Producto>();
                 return  View("Index",producto);
             }else{
                 var producto = await _dbcontext.DataProductos.FindAsync(id);
 
                 Proforma proforma = new Proforma();
                 proforma.Producto = producto;
-                proforma.Precio = producto.prec; //precio del producto en ese momento
+                proforma.Precio = producto.Prec_final; //precio del producto en ese momento
                 proforma.Cantidad = 1;
                 proforma.UserID = userID;
                 _dbcontext.Add(proforma);

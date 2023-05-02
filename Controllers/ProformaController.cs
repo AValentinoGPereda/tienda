@@ -12,7 +12,7 @@ using System.Dynamic;
 using myapp.Models;
 
 
-namespace appfunko.Controllers
+namespace myapp.Controllers
 {
     public class ProformaController : Controller
     {
