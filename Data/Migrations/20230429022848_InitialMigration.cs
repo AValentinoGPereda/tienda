@@ -51,25 +51,6 @@ namespace myapp.Data.Migrations
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                 });
 
-            migrationBuilder.CreateTable(
-                name: "t_productos",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    prod = table.Column<string>(type: "text", nullable: true),
-                    prec = table.Column<decimal>(type: "numeric", nullable: false),
-                    tipo = table.Column<string>(type: "text", nullable: true),
-                    desc = table.Column<decimal>(type: "numeric", nullable: false),
-                    categ = table.Column<string>(type: "text", nullable: true),
-                    Prec_final = table.Column<decimal>(type: "numeric", nullable: false),
-                    imgProd = table.Column<string>(type: "text", nullable: true),
-                    Status = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_t_productos", x => x.id);
-                });
 
             migrationBuilder.CreateTable(
                 name: "usuario_",
@@ -250,9 +231,6 @@ namespace myapp.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUserTokens");
-
-            migrationBuilder.DropTable(
-                name: "t_productos");
 
             migrationBuilder.DropTable(
                 name: "usuario_");

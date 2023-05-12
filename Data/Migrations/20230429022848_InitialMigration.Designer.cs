@@ -225,43 +225,7 @@ namespace myapp.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("myapp.Models.Productos", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .HasColumnName("id");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
-
-                    b.Property<decimal>("Prec_final")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("Status")
-                        .HasColumnType("text");
-
-                    b.Property<string>("categ")
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("desc")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("imgProd")
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("prec")
-                        .HasColumnType("numeric");
-
-                    b.Property<string>("prod")
-                        .HasColumnType("text");
-
-                    b.Property<string>("tipo")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("t_productos");
-                });
 
             modelBuilder.Entity("myapp.Models.Registro", b =>
                 {
