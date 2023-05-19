@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using myapp.Data;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
-
+using myapp.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +17,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+//Registro mi logica customizada y reusable
+builder.Services.AddScoped<ProductoService, ProductoService>();
 
 var app = builder.Build();
 

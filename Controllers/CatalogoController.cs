@@ -24,18 +24,21 @@ namespace myapp.Controllers
         private readonly ApplicationDbContext _dbcontext;
 
         private readonly IDistributedCache _cache;
-         private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public CatalogoController(ILogger<CatalogoController> logger,
                 ApplicationDbContext context,
                 IDistributedCache cache,
-                 UserManager<IdentityUser> userManager)
+                 UserManager<IdentityUser> userManager,
+                 SignInManager<IdentityUser> signInManager)
         {
             _logger = logger;
             _dbcontext = context;
             _cache = cache;
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
 
@@ -63,6 +66,7 @@ namespace myapp.Controllers
 
         public async Task<IActionResult> Add(int? id){
             var userID = _userManager.GetUserName(User); //sesion
+
             if(userID == null){
                 ViewData["Message"] = "Por favor debe loguearse antes de agregar un producto";
                 List<Producto> producto = new List<Producto>();
