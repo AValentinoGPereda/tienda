@@ -1,15 +1,27 @@
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
+
+using myapp.Data;
 using myapp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace myapp.Controllers;
 
 public class AdminController : Controller {
      private readonly ILogger<AdminController> _logger;
 
-    public AdminController(ILogger<AdminController> logger)
+     private readonly UserManager<IdentityUser> _userManager;
+
+    public AdminController(ILogger<AdminController> logger, UserManager<IdentityUser> userManager)
     {
         _logger = logger;
+        _userManager = userManager;
     }
 
 
