@@ -11133,19 +11133,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sistema\\.nuget\\packages\\": {}
+    "C:\\Users\\HUAWEI\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
+      "projectUniqueName": "D:\\USMP\\7to siclo\\Programación I\\PROYECTO FINAL\\tienda\\myapp.csproj",
       "projectName": "myapp",
-      "projectPath": "c:\\Users\\Sistema\\tienda\\myapp.csproj",
-      "packagesPath": "C:\\Users\\Sistema\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Sistema\\tienda\\obj\\",
+      "projectPath": "D:\\USMP\\7to siclo\\Programación I\\PROYECTO FINAL\\tienda\\myapp.csproj",
+      "packagesPath": "C:\\Users\\HUAWEI\\.nuget\\packages\\",
+      "outputPath": "D:\\USMP\\7to siclo\\Programación I\\PROYECTO FINAL\\tienda\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sistema\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\HUAWEI\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

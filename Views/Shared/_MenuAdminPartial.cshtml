@@ -3,7 +3,11 @@
 
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
-
+<style>
+    .nav-item {
+        list-style: none;
+    }
+</style>
 @if (SignInManager.IsSignedIn(User))
 {
     IdentityUser myidentity  = await Task.Run(() => UserManager.GetUserAsync(User));

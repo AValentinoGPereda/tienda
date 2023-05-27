@@ -3,12 +3,13 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<link rel="stylesheet" href="~/css/Carrito.css" asp-append-version="true" />
 <h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<div class="table-container">
 <table class="table">
     <thead>
         <tr>
@@ -44,7 +45,7 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr class="element">
             <td>
                 @Html.DisplayFor(modelItem => item.prod)
             </td>
@@ -54,7 +55,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.tipo)
             </td>
-            <td>
+            <td class="element">
                 @Html.DisplayFor(modelItem => item.desc)
             </td>
             <td>
@@ -73,11 +74,12 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="control">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id" class="control">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" class="control">Delete</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+</div>
