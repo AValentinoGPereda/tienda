@@ -10,6 +10,7 @@ using myapp.Models;
 using myapp.Data;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.Identity;
 
 
 namespace myapp.Controllers
@@ -18,18 +19,30 @@ namespace myapp.Controllers
     {
         private readonly ILogger<ContactoController> _logger;
         private readonly ApplicationDbContext _context;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public ContactoController(ILogger<ContactoController> logger,
-         ApplicationDbContext context)
+        public ContactoController(ILogger<ContactoController> logger, ApplicationDbContext context)
         {
             _logger = logger;
-            _context = context;
+            _context = context; 
+            
         }
 
         public IActionResult Index()
         {
             return View("Create");
         }
+
+    public async Task<IActionResult> ConsultaAdmin(string? searchString)
+        {
+            
+            var consultas = from o in _context.DataContacto select o;           
+              consultas = consultas.Where(s => s.Nombre != null);
+            
+            return View(await consultas.ToListAsync());
+        }
+
+
 
         [HttpPost]
         public IActionResult Create(Contactos objContacto)
