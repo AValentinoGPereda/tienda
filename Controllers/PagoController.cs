@@ -30,27 +30,27 @@ namespace myapp.Controllers
         public IActionResult Create(Decimal monto)
         {
 
-            Pago pago = new Pago();
-            pago.UserID = _userManager.GetUserName(User);
-            pago.MontoTotal = monto;
-            return View(pago);
+            Pagos pagos = new Pagos();
+            pagos.UserID = _userManager.GetUserName(User);
+            pagos.MontoTotal = monto;
+            return View(pagos);
         }
 
         [HttpPost]
-        public IActionResult Pagar(Pago pago)
+        public IActionResult Pagar(Pago pagos)
         {
-            pago.PaymentDate = DateTime.UtcNow;
-            _context.Add(pago);
+            pagos.PaymentDate = DateTime.UtcNow;
+            _context.Add(pagos);
 
             var itemsProforma = from o in _context.DataProformas select o;
             itemsProforma = itemsProforma.
                 Include(p => p.Producto).
-                Where(s => s.UserID.Equals(pago.UserID) && s.Status.Equals("PENDIENTE"));
+                Where(s => s.UserID.Equals(pagos.UserID) && s.Status.Equals("PENDIENTE"));
 
             Pedido pedido = new Pedido();
-            pedido.UserID = pago.UserID;
-            pedido.Total = pago.MontoTotal;
-            pedido.pago = pago;
+            pedido.UserID = pagos.UserID;
+            pedido.Total = pagos.MontoTotal;
+            pedido.pago = pagos;
             pedido.Status = "PENDIENTE";
             _context.Add(pedido);
 
