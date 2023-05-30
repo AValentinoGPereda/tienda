@@ -1,3 +1,6 @@
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
 @model myapp.Models.Pagos
 @{
     ViewData["Title"] = "Pago";
@@ -47,7 +50,12 @@
                   <label asp-for="Direccion" class="control-label"></label>
                 </div>
                 <div class="col-sm-2">
-                  <input asp-for="Direccion" class="form-control"/>
+                 <input asp-for="Direccion" id="direccion" class="form-control" />
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div id="mapa" style="height: 200px;"></div>
                 </div>
               </div>
               <div class="form-group row">
@@ -77,3 +85,45 @@
           </div>
         </div>
     </div>
+
+
+    
+<script>
+  // Crea un objeto de mapa Leaflet
+  var mymap = L.map('mapa').setView([-12.0464, -77.0428], 13);
+
+  // Crea una capa base utilizando OpenStreetMap
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+  }).addTo(mymap);
+
+  // Escucha el evento de cambio en el campo de dirección
+  var input = document.getElementById('direccion');
+  input.addEventListener('change', function() {
+    var address = input.value;
+
+    // Utiliza la API de geocodificación de OpenStreetMap (Nominatim) para obtener las coordenadas
+    fetch('https://nominatim.openstreetmap.org/search?format=json&q=' + address)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.length > 0) {
+          var lat = parseFloat(data[0].lat);
+          var lon = parseFloat(data[0].lon);
+
+          // Centra el mapa en las coordenadas encontradas
+          mymap.setView([lat, lon], 13);
+
+          // Crea un marcador en la ubicación encontrada
+          var marker = L.marker([lat, lon]).addTo(mymap);
+        } else {
+          console.log('No se encontraron resultados para la dirección especificada.');
+        }
+      })
+      .catch(function(error) {
+        console.log('Error al obtener las coordenadas:', error);
+      });
+  });
+</script>
