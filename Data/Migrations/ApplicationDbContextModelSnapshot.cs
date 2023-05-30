@@ -307,6 +307,41 @@ namespace myapp.Data.Migrations
                     b.ToTable("t_pago");
                 });
 
+            modelBuilder.Entity("myapp.Models.Pagos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Destinatario")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Direccion")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("MontoTotal")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("NombreTarjeta")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NumeroTarjeta")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<string>("UserID")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_pagos");
+                });
+
             modelBuilder.Entity("myapp.Models.Pedido", b =>
                 {
                     b.Property<int>("ID")
@@ -315,6 +350,9 @@ namespace myapp.Data.Migrations
                         .HasColumnName("id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ID"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Status")
                         .HasColumnType("text");
@@ -406,6 +444,47 @@ namespace myapp.Data.Migrations
                     b.HasIndex("ProductoId");
 
                     b.ToTable("t_proforma");
+                });
+
+            modelBuilder.Entity("myapp.Models.Prueba", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<decimal>("Prec_final")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("Status")
+                        .HasColumnType("text");
+
+                    b.Property<string>("categ")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("desc")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("descr")
+                        .HasColumnType("text");
+
+                    b.Property<string>("imgProd")
+                        .HasColumnType("text");
+
+                    b.Property<decimal>("prec")
+                        .HasColumnType("numeric");
+
+                    b.Property<string>("prod")
+                        .HasColumnType("text");
+
+                    b.Property<string>("tipo")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("t_prueba");
                 });
 
             modelBuilder.Entity("myapp.Models.Registro", b =>
@@ -514,7 +593,7 @@ namespace myapp.Data.Migrations
 
             modelBuilder.Entity("myapp.Models.Pedido", b =>
                 {
-                    b.HasOne("myapp.Models.Pago", "pago")
+                    b.HasOne("myapp.Models.Pagos", "pago")
                         .WithMany()
                         .HasForeignKey("pagoId");
 

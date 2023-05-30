@@ -51,6 +51,98 @@ namespace myapp.Data.Migrations
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "t_contactos",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    name = table.Column<string>(type: "text", nullable: true),
+                    email = table.Column<string>(type: "text", nullable: true),
+                    consulta = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_contactos", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_pago",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    PaymentDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    NombreTarjeta = table.Column<string>(type: "text", nullable: true),
+                    NumeroTarjeta = table.Column<string>(type: "text", nullable: true),
+                    MontoTotal = table.Column<decimal>(type: "numeric", nullable: false),
+                    UserID = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_pago", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_pagos",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    PaymentDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    NombreTarjeta = table.Column<string>(type: "text", nullable: true),
+                    NumeroTarjeta = table.Column<string>(type: "text", nullable: true),
+                    MontoTotal = table.Column<decimal>(type: "numeric", nullable: false),
+                    UserID = table.Column<string>(type: "text", nullable: true),
+                    Destinatario = table.Column<string>(type: "text", nullable: true),
+                    Direccion = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_pagos", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_producto",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    prod = table.Column<string>(type: "text", nullable: true),
+                    prec = table.Column<decimal>(type: "numeric", nullable: false),
+                    tipo = table.Column<string>(type: "text", nullable: true),
+                    desc = table.Column<decimal>(type: "numeric", nullable: false),
+                    descr = table.Column<string>(type: "text", nullable: true),
+                    categ = table.Column<string>(type: "text", nullable: true),
+                    Prec_final = table.Column<decimal>(type: "numeric", nullable: false),
+                    imgProd = table.Column<string>(type: "text", nullable: true),
+                    Status = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_producto", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_prueba",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    prod = table.Column<string>(type: "text", nullable: true),
+                    prec = table.Column<decimal>(type: "numeric", nullable: false),
+                    tipo = table.Column<string>(type: "text", nullable: true),
+                    desc = table.Column<decimal>(type: "numeric", nullable: false),
+                    descr = table.Column<string>(type: "text", nullable: true),
+                    categ = table.Column<string>(type: "text", nullable: true),
+                    Prec_final = table.Column<decimal>(type: "numeric", nullable: false),
+                    imgProd = table.Column<string>(type: "text", nullable: true),
+                    Status = table.Column<string>(type: "text", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_prueba", x => x.id);
+                });
 
             migrationBuilder.CreateTable(
                 name: "usuario_",
@@ -176,6 +268,76 @@ namespace myapp.Data.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "t_order",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserID = table.Column<string>(type: "text", nullable: true),
+                    Total = table.Column<decimal>(type: "numeric", nullable: false),
+                    pagoId = table.Column<int>(type: "integer", nullable: true),
+                    Status = table.Column<string>(type: "text", nullable: true),
+                    Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_order", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_t_order_t_pagos_pagoId",
+                        column: x => x.pagoId,
+                        principalTable: "t_pagos",
+                        principalColumn: "id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_proforma",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    UserID = table.Column<string>(type: "text", nullable: true),
+                    ProductoId = table.Column<int>(type: "integer", nullable: true),
+                    Cantidad = table.Column<int>(type: "integer", nullable: false),
+                    Precio = table.Column<decimal>(type: "numeric", nullable: false),
+                    Status = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_proforma", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_t_proforma_t_producto_ProductoId",
+                        column: x => x.ProductoId,
+                        principalTable: "t_producto",
+                        principalColumn: "id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "t_order_detail",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ProductoId = table.Column<int>(type: "integer", nullable: true),
+                    Cantidad = table.Column<int>(type: "integer", nullable: false),
+                    Precio = table.Column<decimal>(type: "numeric", nullable: false),
+                    pedidoID = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_t_order_detail", x => x.id);
+                    table.ForeignKey(
+                        name: "FK_t_order_detail_t_order_pedidoID",
+                        column: x => x.pedidoID,
+                        principalTable: "t_order",
+                        principalColumn: "id");
+                    table.ForeignKey(
+                        name: "FK_t_order_detail_t_producto_ProductoId",
+                        column: x => x.ProductoId,
+                        principalTable: "t_producto",
+                        principalColumn: "id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -212,6 +374,26 @@ namespace myapp.Data.Migrations
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_order_pagoId",
+                table: "t_order",
+                column: "pagoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_order_detail_pedidoID",
+                table: "t_order_detail",
+                column: "pedidoID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_order_detail_ProductoId",
+                table: "t_order_detail",
+                column: "ProductoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_t_proforma_ProductoId",
+                table: "t_proforma",
+                column: "ProductoId");
         }
 
         /// <inheritdoc />
@@ -233,6 +415,21 @@ namespace myapp.Data.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
+                name: "t_contactos");
+
+            migrationBuilder.DropTable(
+                name: "t_order_detail");
+
+            migrationBuilder.DropTable(
+                name: "t_pago");
+
+            migrationBuilder.DropTable(
+                name: "t_proforma");
+
+            migrationBuilder.DropTable(
+                name: "t_prueba");
+
+            migrationBuilder.DropTable(
                 name: "usuario_");
 
             migrationBuilder.DropTable(
@@ -240,6 +437,15 @@ namespace myapp.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "t_order");
+
+            migrationBuilder.DropTable(
+                name: "t_producto");
+
+            migrationBuilder.DropTable(
+                name: "t_pagos");
         }
     }
 }

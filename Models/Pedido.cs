@@ -14,8 +14,9 @@ namespace myapp.Models
 
         public Decimal Total { get; set; }
 
-        public Pago? pago { get; set; }
+        public Pagos? pago { get; set; }
 
         public string? Status { get; set; }
+        public DateTime Date { get; set; }
     }
 }

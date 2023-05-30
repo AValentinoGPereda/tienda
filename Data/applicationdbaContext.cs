@@ -22,4 +22,11 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Pedido> DataPedido { get; set; }
 
     public DbSet<DetallePedido> DataDetallePedido { get; set; } 
+
+    public DbSet<Prueba> DataPrueba { get; set; }
+
+    public DbSet<Pagos> DataPagos { get; set; }
+
+
+
 }

@@ -37,7 +37,7 @@ namespace myapp.Controllers
         }
 
         [HttpPost]
-        public IActionResult Pagar(Pago pagos)
+        public IActionResult Pagar(Pagos pagos)
         {
             pagos.PaymentDate = DateTime.UtcNow;
             _context.Add(pagos);
@@ -52,6 +52,7 @@ namespace myapp.Controllers
             pedido.Total = pagos.MontoTotal;
             pedido.pago = pagos;
             pedido.Status = "PENDIENTE";
+            pedido.Date= DateTime.UtcNow;
             _context.Add(pedido);
 
             List<DetallePedido> itemsPedido = new List<DetallePedido>();
