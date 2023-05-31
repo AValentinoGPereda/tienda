@@ -2,104 +2,108 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand[b-sfcgpkgsl6] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+  white-space: normal !important;
+  text-align: center !important;
+  word-break: break-all !important;
 }
 
+nav[b-sfcgpkgsl6]{
+  max-width: 100% !important;
+  right: 0 !important;
+  
+}
 a[b-sfcgpkgsl6] {
-  color: #0077cc;
+  color: #0077cc !important;
 }
 
 .btn-primary[b-sfcgpkgsl6] {
-  color: #fff;
-  background-color: orange;
-  border-color: green;
+  color: #fff !important;
+  background-color: orange !important;
+  border-color: green !important;
 }
 
 .nav-pills .nav-link.active[b-sfcgpkgsl6], .nav-pills .show > .nav-link[b-sfcgpkgsl6] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: #fff !important;
+  background-color: #1b6ec2 !important;
+  border-color: #1861ac !important;
 }
 
 .border-top[b-sfcgpkgsl6] {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5 !important;
 }
 .border-bottom[b-sfcgpkgsl6] {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5 !important;
 }
 
 .box-shadow[b-sfcgpkgsl6] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05) !important;
 }
 
 button.accept-policy[b-sfcgpkgsl6] {
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1rem !important;
+  line-height: inherit !important;
 }
 
-footer[b-sfcgpkgsl6]{
-  background: #212226;
-  padding: 20px;
-  color: white;
-  position: fixed;
-  bottom: 0;
-}    
-.main-content[b-sfcgpkgsl6]{
-display: flex;
-}
-.main-content .box[b-sfcgpkgsl6]{
-flex-basis: 50%;
-padding: 0px 20px;
-}
-.box h2[b-sfcgpkgsl6]{
-font-size: 1.125rem;
-font-weight: 600;
-text-transform: uppercase;
-}
-.box .content[b-sfcgpkgsl6]{
-margin: 20px 0 0 0;
-position: relative;
-}
-.box .content[b-sfcgpkgsl6]:before{
-position: absolute;
-content: '';
-top: -10px;
-height: 2px;
-width: 100%;
-background: #1a1a1a;
-}/*linea negra del footer */
-.box .content[b-sfcgpkgsl6]:after{
-position: absolute;
-content: '';
-height: 2px;
-width: 15%;
-background: #1f2f52;
-top: -10px;
-}/* linea del footer*/
-.left .content p[b-sfcgpkgsl6]{
-text-align: justify;
-}/* letra de la izquierda del footer*/
-.center .content .fas[b-sfcgpkgsl6]{
-font-size: 1.4375rem;
-background: #1a1a1a;
-line-height: 45px;
-text-align: center;
-border-radius: 50%;
-transition: 0.3s;
-cursor: pointer;
-padding-left: 15px;
-}/*imagenes a poner telefono, email, simbolo de ubi */
-.center .content .text[b-sfcgpkgsl6]{
-font-size: 1.0625rem;
-font-weight: 500;
-padding-left: 10px;
-}
-.bottom center[b-sfcgpkgsl6]{
-padding-bottom: 5px;
-font-size: 0.850rem;
-color: gray;
- /* copy de la empresa*/
+
+footer[b-sfcgpkgsl6] {
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 1px !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  
 }
 
+.info[b-sfcgpkgsl6]{
+  left: 0 !important;
+  margin-left: 0% !important;
+  text-align: left !important;
+}
+
+.searchbar[b-sfcgpkgsl6]{
+  float: right !important;
+  margin: auto !important;
+}
+
+.btn-social[b-sfcgpkgsl6] {
+  color: #fff !important;
+  border-radius: 50% !important;
+  width: 35px !important;
+  height: 35px !important;
+  transition: all 0.3s ease-in-out !important;
+  right: 0 !important;
+}
+
+.img-social[b-sfcgpkgsl6]{
+  border-radius: 50% !important;
+  right: 0 !important;
+  float:right !important;
+  margin-left: 10px !important;
+}
+
+.btn-social:hover[b-sfcgpkgsl6] {
+  transform: scale(1.1) !important;
+}
+
+.bg-purple[b-sfcgpkgsl6] {
+  background-color: #282828 !important;
+}
+
+
+@media screen and (max-width: 575px) {
+  .txt-logo[b-sfcgpkgsl6] {
+    display: block !important;
+    margin: 0 auto !important;
+
+  }
+}
+
+.navbar-collapse[b-sfcgpkgsl6]{
+  padding: 5px !important;
+  margin-right: 5vw !important;
+}
+
+.socials[b-sfcgpkgsl6]{
+  right: 7% !important;
+}

@@ -4,13 +4,15 @@
     ViewData["Title"] = "Index";
 }
 <link rel="stylesheet" href="~/css/Carrito.css" asp-append-version="true" />
-<h1>Index</h1>
+ <link rel="stylesheet" href="~/css/Footer.css" asp-append-version="true" />
+ <link rel="stylesheet" href="~/css/Tablas.css" asp-append-version="true" />
+<h1>Administración de Productos</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="create">Create New</a>
 </p>
 <div class="table-container">
-<table class="table">
+<table class="table table-sm table-hover">
     <thead>
         <tr>
             <th>
@@ -26,21 +28,14 @@
                 @Html.DisplayNameFor(model => model.desc)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.descr)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.categ)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Prec_final)
             </th>
+            
             <th>
-                @Html.DisplayNameFor(model => model.imgProd)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -58,20 +53,12 @@
             <td class="element">
                 @Html.DisplayFor(modelItem => item.desc)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.descr)
-            </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.categ)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Prec_final)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.imgProd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id" class="control">Edit</a> |

@@ -22,7 +22,12 @@ namespace myapp.Service
         }
 
         public async Task<Producto> CreateOrUpdate(Producto p){
-            _context.Add(p);
+           if(ProductoExists(p.Id)){
+                    _context.Update(p);
+            }
+            else{
+                _context.Add(p);
+            }
             await _context.SaveChangesAsync();
             return p;
         }

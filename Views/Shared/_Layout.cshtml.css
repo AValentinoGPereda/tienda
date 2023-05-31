@@ -2,55 +2,56 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+  white-space: normal !important;
+  text-align: center !important;
+  word-break: break-all !important;
 }
 
 nav{
-  max-width: 100%;
-  right: 0;
+  max-width: 100% !important;
+  right: 0 !important;
+  
 }
 a {
-  color: #0077cc;
+  color: #0077cc !important;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: orange;
-  border-color: green;
+  color: #fff !important;
+  background-color: orange !important;
+  border-color: green !important;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  color: #fff !important;
+  background-color: #1b6ec2 !important;
+  border-color: #1861ac !important;
 }
 
 .border-top {
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5 !important;
 }
 .border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5 !important;
 }
 
 .box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05) !important;
 }
 
 button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
+  font-size: 1rem !important;
+  line-height: inherit !important;
 }
 
 
 footer {
-  color: #fff;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 1px !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  width: 100% !important;
   
 }
 
@@ -61,39 +62,48 @@ footer {
 }
 
 .searchbar{
-  float: right;
-  margin: auto;
+  float: right !important;
+  margin: auto !important;
 }
 
 .btn-social {
-  color: #fff;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  transition: all 0.3s ease-in-out;
-  right: 0;
+  color: #fff !important;
+  border-radius: 50% !important;
+  width: 35px !important;
+  height: 35px !important;
+  transition: all 0.3s ease-in-out !important;
+  right: 0 !important;
 }
 
 .img-social{
-  border-radius: 50%;
-  right: 0;
-  float:right;
-  margin-left: 10px;
+  border-radius: 50% !important;
+  right: 0 !important;
+  float:right !important;
+  margin-left: 10px !important;
 }
 
 .btn-social:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
 .bg-purple {
-  background-color: #282828;
+  background-color: #282828 !important;
 }
 
 
 @media screen and (max-width: 575px) {
   .txt-logo {
-    display: block;
-    margin: 0 auto;
+    display: block !important;
+    margin: 0 auto !important;
 
   }
+}
+
+.navbar-collapse{
+  padding: 5px !important;
+  margin-right: 5vw !important;
+}
+
+.socials{
+  right: 7% !important;
 }

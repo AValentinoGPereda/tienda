@@ -22,9 +22,10 @@ h1{
     margin: 10px;
   }
   .btn-primary:hover {
-    background-color: #8a2be2;
+    background-color: white;
     box-shadow: 0 8px 15px rgba(0,0,0,.3);
     transform: translateY(-2px);
+    color: #4b0082;
   }
 
 
@@ -55,34 +56,4 @@ td{
   }
 
 
-  .table {
-    width: 100%;
-    margin-bottom: 20px;
-    table-layout: fixed;
-  }
   
-  .table th,
-  .table td {
-    padding: 10px;
-  overflow: hidden;
-  max-height: 100px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  }
-  
-  .table th {
-    background-color: #4b0082;
-  }
-  
-  .table td:hover{
-    text-overflow: initial;
-  }
-  
-  .element {
-    overflow: hidden;
-    height: 50px; /* Adjust the height as per your requirement */
-  }
-  .table-container {
-    width: 100%;
-    overflow-x: auto;
-  }

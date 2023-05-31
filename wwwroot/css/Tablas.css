@@ -1,0 +1,35 @@
+thead{
+    background-color: #4b0082 !important;
+}
+
+td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+th{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.create{
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #4b0082;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    padding: 12px 24px;
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    cursor: pointer;
+    margin: 10px;
+    text-decoration: none;
+  }
+  .create:hover {
+    background-color: #fff;
+    box-shadow: 0 8px 15px rgba(0,0,0,.3);
+    transform: translateY(-2px);
+    color: #4b0082;
+  }

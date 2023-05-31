@@ -71,6 +71,7 @@ namespace myapp.Controllers
         }
 
         // GET: Producto/Edit/5
+       [HttpGet] 
         public async Task<IActionResult> Edit(int? id)
         {
             var producto = await _productoService.Get(id);
@@ -80,12 +81,13 @@ namespace myapp.Controllers
             }
             return View(producto);
         }
+       
+
 
         // POST: Producto/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,prod,prec,tipo,desc,descr,categ,Prec_final,imgProd,Status")] Producto producto)
         {
             if (id != producto.Id)
