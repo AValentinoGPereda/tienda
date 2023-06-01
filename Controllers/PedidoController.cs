@@ -43,9 +43,12 @@ namespace myapp.Controllers
 
         public async Task<IActionResult> Details(int? id)
         {
-            var lista = _context.DataDetallePedido.Where(s => s.pedido.ID == (id));
+            var detallesPedido = await _context.DataDetallePedido
+                .Where(dp => dp.pedido.ID == id)
+                .Include(dp => dp.Producto)
+                .ToListAsync();
 
-            return View(await lista.ToListAsync());
+            return View(detallesPedido);
         }
         
 
