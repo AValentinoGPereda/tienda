@@ -39,6 +39,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.ID" class="control">Details</a> |
+            </td>
         </tr>
 }
     </tbody>

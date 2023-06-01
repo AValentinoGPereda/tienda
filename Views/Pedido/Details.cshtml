@@ -1,0 +1,44 @@
+@model IEnumerable<myapp.Models.DetallePedido>
+@{
+    ViewData["Title"] = "Pedido";  
+}
+<link rel="stylesheet" href="~/css/Carrito.css" asp-append-version="true" />
+<h1>Pedidos</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                Producto
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Producto.prod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

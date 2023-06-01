@@ -40,6 +40,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Consulta)
             </td>
+             <td>
+                <a asp-action="Details" asp-route-id="@item.Id" class="control">Details</a> |
+            </td>
         </tr>
 }
     </tbody>

@@ -11,6 +11,8 @@ using myapp.Data;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using Microsoft.AspNetCore.Identity;
+using myapp.Service;
+
 
 
 namespace myapp.Controllers
@@ -21,10 +23,13 @@ namespace myapp.Controllers
         private readonly ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;
 
-        public ContactoController(ILogger<ContactoController> logger, ApplicationDbContext context)
+        private readonly ContactoService _contactoService;
+
+        public ContactoController(ILogger<ContactoController> logger, ApplicationDbContext context,ContactoService contactoService)
         {
             _logger = logger;
             _context = context; 
+            _contactoService= contactoService;
             
         }
 
@@ -41,6 +46,23 @@ namespace myapp.Controllers
             
             return View(await consultas.ToListAsync());
         }
+
+public async Task<IActionResult> Details(int? id)
+{
+    if (id == null)
+    {
+        return NotFound();
+    }
+
+    var contacto = await _context.DataContacto.FirstOrDefaultAsync(c => c.Id == id);
+
+    if (contacto == null)
+    {
+        return NotFound();
+    }
+
+    return View(contacto);
+}
 
 
 

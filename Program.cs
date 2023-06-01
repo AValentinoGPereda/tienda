@@ -19,6 +19,8 @@ builder.Services.AddControllersWithViews();
 
 //Registro mi logica customizada y reusable
 builder.Services.AddScoped<ProductoService, ProductoService>();
+builder.Services.AddScoped<PedidoService, PedidoService>();
+builder.Services.AddScoped<ContactoService, ContactoService>();
 
 var app = builder.Build();
 
