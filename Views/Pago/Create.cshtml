@@ -7,6 +7,9 @@
 }
  <link rel="stylesheet" href="~/css/Footer.css" asp-append-version="true" />
    <link rel="stylesheet" href="~/css/Edicion.css" asp-append-version="true" />
+
+
+
 <h1>@ViewData["Title"]</h1>
 
     <div class="container">
@@ -28,7 +31,7 @@
                   <label asp-for="NumeroTarjeta" class="control-label"></label>
                 </div>
                 <div>
-                  <input asp-for="NumeroTarjeta" class="form-control" data-inputmask="'mask': '9999-9999-9999-9999'" />
+                  <input asp-for="NumeroTarjeta"  class="form-control" placeholder="9999-9999-9999-9999" data-inputmask="'mask': '9999-9999-9999-9999'" />
                 </div>
               </div>        
               <div class="form-group row">
@@ -36,7 +39,7 @@
                   <label asp-for="DueDateYYMM" class="control-label"></label>
                 </div>
                 <div>
-                  <input asp-for="DueDateYYMM" class="form-control" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'" />
+                  <input asp-for="DueDateYYMM" class="form-control" placeholder="YY/MM" data-inputmask="'mask': '99/99', 'placeholder': 'yy/mm'" />
                 </div>
               </div>
               <div class="form-group row">
@@ -44,7 +47,7 @@
                   <label asp-for="Cvv" class="control-label"></label>
                 </div>
                 <div>
-                  <input asp-for="Cvv" class="form-control" data-inputmask="'mask': '999', 'placeholder': '999'" />
+                  <input asp-for="Cvv" class="form-control" placeholder="999" data-inputmask="'mask': '999', 'placeholder': '999'" />
                 </div>
               </div>
               <div class="form-group row">
@@ -70,10 +73,10 @@
               </div>
               <div class="form-group row">
                 <div>
-                  <label asp-for="MontoTotal" class="control-label"></label>
+                  <label asp-for="MontoTotal" class="control-label" ></label>
                 </div>
                 <div>
-                  <input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="." />
+                  <input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="." readonly/>
                 </div>
               </div>  
               <div class="form-group row">
@@ -89,7 +92,7 @@
     </div>
 
 
-    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   // Crea un objeto de mapa Leaflet
   var mymap = L.map('mapa').setView([-12.0464, -77.0428], 13);
@@ -128,4 +131,5 @@
         console.log('Error al obtener las coordenadas:', error);
       });
   });
+
 </script>

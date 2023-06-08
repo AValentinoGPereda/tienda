@@ -1,4 +1,8 @@
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Identity.EntityFrameworkCore
 @model IEnumerable<myapp.Models.Producto>
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
 @{
     ViewData["Title"] = "Catalogo";  
 }
@@ -22,8 +26,22 @@
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(modelItem => item.prod)</h5>
                   <p class="card-text">@Html.DisplayFor(modelItem => item.Prec_final)</p>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="">Add</a>
-                  <a class="btn btn-info" asp-action="Details" asp-route-id="">View</a>
+                                  @{
+                    IdentityUser myidentity = await UserManager.GetUserAsync(User);
+                    var roles = await UserManager.GetRolesAsync(myidentity);
+
+                    if (roles.Contains("admin"))
+                    {
+                        // Código para el rol de administrador
+                    }
+                    else
+                    {
+                          <div class="button-container">
+                             <a class="btn btn-primary" asp-action="Add" asp-route-id="@item.Id">Añadir</a>
+                          </div>
+                    }
+                }
+                  <a class="btn btn-view" asp-action="Details" asp-route-id="@item.Id">Detalles</a>
                 </div>
               </div>
             </div>
