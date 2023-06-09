@@ -16,7 +16,7 @@
 
         <div class="row">
           <div class="col-sm-10 mt-5">
-           <form asp-controller="Pago" asp-action="Pagar">
+           <form asp-controller="Pago" asp-action="Pagar" id="myForm">
               <div class="form-group row">
                 <input type="hidden" asp-for="UserID"/>
                 <div>
@@ -76,7 +76,7 @@
                   <label asp-for="MontoTotal" class="control-label" ></label>
                 </div>
                 <div>
-                  <input asp-for="MontoTotal" class="form-control" data-thousands="," data-decimal="." readonly/>
+                  <input asp-for="MontoTotal" class="form-control" data-thousands="." data-decimal="," id="montoTotal" readonly/>
                 </div>
               </div>  
               <div class="form-group row">
@@ -132,4 +132,27 @@
       });
   });
 
+</script>
+
+<script>
+  
+  document.querySelector("#myForm").addEventListener("submit", handleSubmit);
+ 
+  function handleSubmit(){
+
+      if(document.querySelector("#montoTotal").value === "0,00"){
+      event.preventDefault();
+      alert("Su pedido ya ha sido pagado, por favor realize otro")
+      }
+      else{
+        alert("Su pedido está en camino, nuestros mejores mensajeros de los 9 reinos se están encargando de ello");
+      
+      }
+  }
+        
+document.addEventListener("DOMContentLoaded", function() {
+  var montoTotal = document.querySelector("#montoTotal");
+  montoTotal.value = parseFloat(montoTotal.value)/100;
+});
+  
 </script>

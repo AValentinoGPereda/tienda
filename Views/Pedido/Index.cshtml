@@ -34,7 +34,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.UserID)
             </td>
-            <td>
+            <td data-total="@item.Total">
                 @Html.DisplayFor(modelItem => item.Total)
             </td>
             <td>
@@ -50,3 +50,4 @@
 }
     </tbody>
 </table>
+
