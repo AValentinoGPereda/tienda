@@ -79,7 +79,7 @@ namespace myapp.Controllers
 
             ViewData["Message"] = "El pago se ha registrado y su pedido nro "+ pedido.ID +" esta en camino";
            // return View("Create");
-           return RedirectToAction("Create");
+           return RedirectToAction("Index", "Catalogo");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

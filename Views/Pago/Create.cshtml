@@ -76,7 +76,7 @@
                   <label asp-for="MontoTotal" class="control-label" ></label>
                 </div>
                 <div>
-                  <input asp-for="MontoTotal" class="form-control" data-thousands="." data-decimal="," id="montoTotal" readonly/>
+                  <input asp-for="MontoTotal" id="montoTotal" class="form-control"  data-thousands="," data-decimal="." readonly/>
                 </div>
               </div>  
               <div class="form-group row">
@@ -140,7 +140,7 @@
  
   function handleSubmit(){
 
-      if(document.querySelector("#montoTotal").value === "0,00"){
+      if(document.querySelector("#montoTotal").value === "0.00"){
       event.preventDefault();
       alert("Su pedido ya ha sido pagado, por favor realize otro")
       }
@@ -149,10 +149,5 @@
       
       }
   }
-        
-document.addEventListener("DOMContentLoaded", function() {
-  var montoTotal = document.querySelector("#montoTotal");
-  montoTotal.value = parseFloat(montoTotal.value)/100;
-});
   
 </script>
