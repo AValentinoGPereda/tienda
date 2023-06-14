@@ -53,10 +53,85 @@ namespace myapp.Controllers
         
 
 
+
+
+        // GET: Producto/Edit/5
+       [HttpGet] 
+        public async Task<IActionResult> Edit(int? id)
+        {
+            var producto = await _pedidoService.Gets(id);
+
+            if(producto == null){
+                return NotFound();
+            }
+            return View(producto);
+        }
+       
+
+
+        // POST: Producto/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        public async Task<IActionResult> Edit(int ID, [Bind("ID,UserID,Total,pago,Status,Date")] Pedido pedido)
+        {
+            
+            if (ID != pedido.ID)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _pedidoService.CreateOrUpdates(pedido);
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!_pedidoService.PedidoExistss(pedido.ID))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction(nameof(Index));
+            }
+            return View(pedido);
+        }
+
+        // GET: Producto/Delete/5
+        public async Task<IActionResult> Delete(int? id)
+        {
+           var producto = await _pedidoService.Gets(id);
+
+            if(producto == null){
+                return NotFound();
+            }
+            return View(producto);
+        }
+
+        // POST: Producto/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            
+            await _pedidoService.Deletes(id);
+            return RedirectToAction(nameof(Index));
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View("Error!");
         }
+
+
+
     }
 }
