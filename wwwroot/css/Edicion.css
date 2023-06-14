@@ -39,6 +39,16 @@ body {
     white-space: pre-wrap;
   }
 
+  .select{
+    width: 800px;
+    margin-bottom: 20px;
+  }
+
+  .select:focus{
+    box-shadow: 0 2px 2px #8a2be2;
+    border-color: #8a2be2;
+  }
+
   .area{
     width: 800px;
     padding: 10px;
@@ -50,6 +60,7 @@ body {
     white-space: pre-wrap;
   }
   
+
   
   .button{
     background-color: #4b0082;

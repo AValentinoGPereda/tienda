@@ -5,9 +5,10 @@
 }
  <link rel="stylesheet" href="~/css/Footer.css" asp-append-version="true" />
 <link rel="stylesheet" href="~/css/Edicion.css" asp-append-version="true" />
+
 <h1>Edit</h1>
 
-<h4>Producto</h4>
+<h4>Pedido</h4>
 <hr />
 <div class="container">
 <div class="row">
@@ -15,7 +16,7 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="ID" />
-            <input type="hidden" asp-for="Date" />
+            
             <div class="form-group">
                 <label asp-for="UserID" class="control-label"></label>
                 <input asp-for="UserID" class="form-control" readonly/>
@@ -26,13 +27,24 @@
                 <input asp-for="Total" class="form-control" readonly/>
                 <span asp-validation-for="Total" class="text-danger"></span>
             </div>
+            <div class="form-gropu">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" id="date" readonly/>
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
+                <label asp-for="Status" class="control-label"></label> 
+                <select asp-for="Status" class="form-control select">
+                    <option value="PENDIENTE">PENDIENTE</option>
+                    <option value="COMPLETADO">COMPLETADO</option>
+                    <option value="ANULADO">ANULADO</option>
+                </select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary save" />
+                
             </div>
         </form>
     </div>
