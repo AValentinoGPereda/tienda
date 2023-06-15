@@ -5,15 +5,36 @@
 <link rel="stylesheet" href="~/css/Carrito.css" asp-append-version="true" />
  <link rel="stylesheet" href="~/css/Footer.css" asp-append-version="true" />
   <link rel="stylesheet" href="~/css/Tablas.css" asp-append-version="true" />
+
+  <style>
+    .searchForm_label{
+        color: white !important;
+        margin-right: 2% !important;
+    }
+
+    .searchForm_input, .searchForm_select{
+        border-radius: 15px !important;
+        border: none !important;
+        margin-right: 2px !important;
+    }
+
+    .searchForm_input:focus{
+        border: none !important;
+    }
+
+    .searchForm_submit{
+        border: none !important;
+    }
+  </style>
 <h1>Pedidos</h1>
 
 
     <div class="SearchContainer">
         <form asp-controller="Pedido" asp-action="Index" class="SearchContainer_searchForm">
-            <label class="searchForm_label">Buscar por usuario</label>
+            <label class="searchForm_label">Buscar por usuario:</label>
             <input class="searchForm_input" type="search" name="searchUsername" placeholder="example@example.com">
             
-            <label class="searchForm_label">Filtrar por estado del pedido</label>
+            <label class="searchForm_label">Filtrar por estado del pedido:</label>
             <select class="searchForm_select" name="orderStatus">
                 <option value="">Todos</option>
                 <option value="PENDIENTE">PENDIENTE</option>
@@ -21,7 +42,7 @@
                 <option value="ANULADO">ANULADO</option>
             </select>
 
-            <button class="searchForm_submit" type="submit">Buscar</button>
+            <button class="searchForm_submit control" type="submit">Buscar</button>
         </form>
     </div>
 
