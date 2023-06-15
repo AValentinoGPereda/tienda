@@ -32,10 +32,21 @@ namespace myapp.Controllers
             _context = context;
         }
 
-        public  async Task<IActionResult>  Index()
+        public  async Task<IActionResult>  Index(string? searchUsername,string? orderStatus)
         {
-             var pedidos = from o in _context.DataPedido select o;
-             pedidos = pedidos.Where(s => s.Status.Contains("PENDIENTE"));
+            var pedidos = from o in _context.DataPedido select o;
+
+            if(!String.IsNullOrEmpty(searchUsername) && !String.IsNullOrEmpty(orderStatus)){
+                pedidos = pedidos.Where(s => s.UserID.Contains(searchUsername) && s.Status.Contains(orderStatus));
+            }else if (!String.IsNullOrEmpty(searchUsername) ){
+                pedidos = pedidos.Where(s => s.UserID.Contains(searchUsername));
+            }else if (!String.IsNullOrEmpty(orderStatus)){
+                pedidos = pedidos.Where(s => s.Status.Contains(orderStatus));
+            }else{
+                pedidos = from o in _context.DataPedido select o;
+            }
+
+
 
             return View(await pedidos.ToListAsync());
         }
@@ -72,36 +83,38 @@ namespace myapp.Controllers
         // POST: Producto/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        public async Task<IActionResult> Edit(int ID, [Bind("ID,UserID,Total,pago,Status,Date")] Pedido pedido)
+[HttpPost]
+public async Task<IActionResult> Edit(int ID, [Bind("ID,UserID,Total,pago,Status,Date")] Pedido pedido)
+{
+    if (ID != pedido.ID)
+    {
+        return NotFound();
+    }
+
+    if (ModelState.IsValid)
+    {
+        try
         {
+            // Establecer el Kind del objeto DateTime en Utc
+            pedido.Date = DateTime.SpecifyKind(pedido.Date, DateTimeKind.Utc);
             
-            if (ID != pedido.ID)
+            await _pedidoService.CreateOrUpdates(pedido);
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            if (!_pedidoService.PedidoExists(pedido.ID))
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            else
             {
-                try
-                {
-                    await _pedidoService.CreateOrUpdates(pedido);
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!_pedidoService.PedidoExistss(pedido.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                throw;
             }
-            return View(pedido);
         }
+        return RedirectToAction(nameof(Index));
+    }
+    return View(pedido);
+}
 
         // GET: Producto/Delete/5
         public async Task<IActionResult> Delete(int? id)

@@ -62,19 +62,31 @@ namespace myapp.Service
             return _context.DataDetallePedido.Any(e => e.pedido.ID == id);
         }
 
-        public async Task<Pedido> CreateOrUpdates(Pedido p)
-        {
-            if (PedidoExistss(p.ID))
-            {
-                _context.Update(p);
-            }
-            else
-            {
-                _context.Add(p);
-            }
-            await _context.SaveChangesAsync();
-            return p;
-        }
+public async Task<Pedido> CreateOrUpdates(Pedido p)
+{
+    if (_context.DataPedido.Any(x => x.ID == p.ID))
+    {
+        // Registro existente, actualizar los campos relevantes
+        var existingPedido = await _context.DataPedido.FindAsync(p.ID);
+        existingPedido.UserID = p.UserID;
+        existingPedido.Total = p.Total;
+        existingPedido.pago = p.pago;
+        existingPedido.Status = p.Status;
+        existingPedido.Date = p.Date;
+
+        await _context.SaveChangesAsync();
+        return existingPedido;
+    }
+    else
+    {
+        // Registro nuevo, agregarlo al contexto y guardar
+        // Asegurarse de que la fecha tenga Kind=Utc
+        p.Date = DateTime.SpecifyKind(p.Date, DateTimeKind.Utc);
+        _context.Add(p);
+        await _context.SaveChangesAsync();
+        return p;
+    }
+}
 
         public async Task<List<Pedido>> GetAlls()
         {
